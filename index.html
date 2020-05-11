@@ -1,0 +1,477 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+
+	<title>msaqmar</title>
+	<style>
+		html{
+  		background: url(bg3.jpg) center fixed;
+  		background-size: cover;
+		}
+		#img{
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			border-style: none;
+			border-color: black;
+			border-width: thin;
+			position: relative;
+			right: 855px;
+			bottom: 397.5px;
+		}
+		#backcircle1{
+			width: 210px;
+			height: 210px;
+			border-width: thin;
+			border-radius: 50%;
+			border: solid 2px white;
+			border-top-style: none;
+			border-right-style: dashed;
+			color: transparent;
+			position: relative;
+			left: 243.3px;
+			bottom: 606.2px;
+			animation-name: innerCircle;
+			animation-duration: 100s;
+			animation-iteration-count: infinite;
+		}
+		@keyframes innerCircle {
+			100%{
+				transform: rotate(360deg);
+			}
+		}
+
+		#backcircle2{
+			width: 225px;
+			height: 225px;
+			border-width: thin;
+			border-radius: 50%;
+			border: solid 2px #00FFFF;
+			border-bottom-style: none;
+			border-right-style: dotted;
+			border-top-style: dashed;
+			color: transparent;
+			position: relative;
+			left: 234.5px;
+			bottom: 825px;
+			animation-name: innerCircle2;
+			animation-duration: 150s;
+			animation-iteration-count: infinite;
+		}
+		@keyframes innerCircle2 {
+			100%{
+				transform: rotate(-360deg);
+			}
+		}
+
+		#backcircle3{
+			width: 240px;
+			height: 240px;
+			border-width: thin;
+			border-radius: 50%;
+			border: solid 2px #fe2c54;
+			border-bottom-style: dashed;
+			border-right-style: dotted;
+			border-top-style: none;
+			color: transparent;
+			position: relative;
+			left: 228.4px;
+			bottom: 1059.5px;
+			animation-name: innerCircle;
+			animation-duration: 200s;
+			animation-iteration-count: infinite;
+		}
+
+
+		.button{
+			display: block;
+			background-color: #fe2c54;
+			color: black;
+			width: 45%;
+			position: relative;
+			left: 800px;
+			bottom: 1150px;
+			padding: 16px 10px;
+			cursor: pointer;
+			text-align: center;
+			border: none;
+			border-radius: 10%;
+			transition: all 0.5s;
+			margin: 5px;
+			font-size: 28px;
+			font-family: Aclonica;
+		}
+		.button #span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+
+}
+.button:hover{
+	background-color: pink;
+}
+
+.button #span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -40px;
+  transition: 0.5s;
+
+}
+
+.button:hover #span {
+  padding-right: 25px;
+
+}
+
+.button:hover #span:after {
+  opacity: 1;
+  right: 0;
+
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 700px;
+  top: 30px;
+  width: 40%; /* Full width */
+  height: 70%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: rgba(0,0,0,70%);
+	color: white;
+	font-size: 28px;
+  margin: 5%; /* 15% from the top and centered */
+  padding: 20px;
+  border: none;
+  width:85%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 30px;
+	height: 30px;
+  text-align: center;
+  text-decoration: none;
+	border-radius: 50%;
+	position: relative;
+	top: 300px;
+	left: 140px;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+.fa-instagram {
+  background: black;
+  color: white;
+	width: 30px;
+	border-radius: 50%;
+
+}
+.fa-github {
+	background: black;
+  color: white;
+	width: 30px;
+	border-radius: 50%;
+}
+
+.fa-envelope {
+	background: black;
+  color: white;
+	width: 30px;
+	border-radius: 50%;
+
+}
+.fa-Twitter {
+	background: black;
+  color: white;
+	width: 30px;
+	border-radius: 50%;
+
+}
+
+
+#h2{
+	width: 1100px;
+	height: 900px;
+	position: relative;
+	left: 450px;
+	bottom: 450px;
+}
+
+#box1{
+	width: 100px;
+	height: 100px;
+	background-position: center;
+	background-clip: border-box;
+	border-radius: 50%;
+	position: relative;
+	bottom: 1950px;
+	left: 100px;
+	border: 2px solid #00FFFF;
+	border-style: dashed;
+	animation-name: innerCircle;
+	animation-duration: 100s;
+	animation-iteration-count: infinite;
+}
+
+
+
+
+.accordion {
+  background-color: #fe2c54;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+	font-size: 20px;
+	font-family: Aclonica;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: pink;
+	color: black;
+  display: none;
+  overflow: hidden;
+	font-family: monospace;
+	font-size: 15px;
+
+	#thumbnail{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+	}
+
+}
+
+
+
+
+</style>
+
+
+</head>
+<body >
+	<link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+	<img src="msa3.png" id="h2" alt="name">
+	<img src="three.jpeg" alt="profile pic" id="img">
+	<div id="backcircle1"></div><div id="backcircle2"></div><div id="backcircle3"></div>
+	<button class="button" id="myBtn1"><span id="span">Personal Info</span></button>
+	<button class="button" id="myBtn2"><span id="span">Educational Qualification</span></button>
+	<button class="button" id="myBtn3"><span id="span">Projects</span></button>
+	<button class="button" id="myBtn4"><span id="span">Contact Details</span></button>
+	<button class="button" id="myBtn5"><span id="span">Certification</span></button>
+	<button class="button" id="myBtn6"><span id="span">Pics</span></button>
+
+	<div id="myModal1" class="modal">
+
+  <!-- Modal content -->
+  	<div class="modal-content">
+    	<span class="close" id="span1">&times;</span>
+    	<h3 style="text-align: center;">MUHAMMED SUFAIL AQMAR</h3><hr>
+			<p style="text-align: left; font-family: monospace; font-size: 20;">
+				Gaming name: Superman<br>
+				Age        : 21<br>
+				Born on : March<br>
+				Languages known : English, Hindi, Kannada, Malayalam<br>
+				Studying in : Srinivas Institute of Technology<br>
+				Interested in : Coding and Web development<br>
+				Hobbies : Travelling, Driving, playing <br>
+				Place      : Mangalore<br>
+				State : Karnataka<br>
+				Nationality: Indian<br>
+  	</div>
+
+	</div>
+	<div id="myModal2" class="modal">
+
+  <!-- Modal content -->
+  	<div class="modal-content">
+    	<span class="close" id="span2">&times;</span>
+			<button class="accordion">SSLC</button>
+					<div class="panel">
+						<p style="font-family: Aclonica; font-size: 28px; text-align: left;"><img src="bearys_logo.jpg" alt="school logo" id="thumbnail">   Bearys Public School</p><hr>
+ 						<ul>
+							<li>Year of passing : 2015</li>
+							<li>Persentage : 84%</li>
+							<li>Board : Karnataka Secondary Education Examination Board</li>
+							<li>Place : Mangalore</li>
+						</ul>
+					</div>
+
+			<button class="accordion">Pre University College</button>
+				<div class="panel">
+					<ul>
+						<li>Year of passing : 2017</li>
+						<li>Persentage : 80.5%</li>
+						<li>Board : Karnataka Education Authority</li>
+						<li>Place : Mangalore</li>
+					</ul>
+				</div>
+
+			<button class="accordion">Engineering</button>
+				<div class="panel">
+					<ul>
+						<li>Year of passing : 2021</li>
+						<li>Persentage : Persuing</li>
+						<li>Board : Visvesvaraya Technological University</li>
+						<li>Place : Mangalore</li>
+					</ul>
+				</div>
+  	</div>
+
+	</div>
+
+
+	<div id="myModal3" class="modal">
+
+  <!-- Modal content -->
+  	<div class="modal-content">
+    	<span class="close" id="span3">&times;</span>
+    	<p>Some text in the Modal 3..</p>
+  	</div>
+
+	</div>
+	<div id="myModal4" class="modal">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <!-- Modal content -->
+  	<div class="modal-content">
+    	<span class="close" id="span4">&times;</span>
+    	<p><a href="https://mail.google.com/mail/?tab=mm"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+			<a href="https://www.instagram.com/aqmar36/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+		<a href="#"><i class="fa fa-Twitter" aria-hidden="true"></i></a></p>
+  	</div>
+
+	</div>
+	<div id="myModal5" class="modal">
+
+  <!-- Modal content -->
+  	<div class="modal-content">
+    	<span class="close" id="span5">&times;</span>
+    	<p>Some text in the Modal 5..</p>
+  	</div>
+
+	</div>
+	<div id="myModal6" class="modal">
+
+  <!-- Modal content -->
+  	<div class="modal-content">
+    	<span class="close" id="span6">&times;</span>
+    	<p>Some text in the Modal 6..</p>
+  	</div>
+
+	</div>
+<img src="newarc2.jpg" alt="top-left" id="box1">
+
+
+
+
+
+
+<script>
+
+var profileButtons = document.getElementsByClassName("button");
+for (let i = 0; i < profileButtons.length; i++) {
+
+	profileButtons[i].onclick = function() {
+			document.getElementsByClassName("modal")[i].style.display = 'block';
+
+	}
+}
+
+var closeButtons = document.getElementsByClassName("close");
+var bodyb = document.getElementsByTagName('body');
+
+for (let i = 0; i < closeButtons.length; i++) {
+
+	closeButtons[i].onclick = function() {
+		document.getElementsByClassName("modal")[i].style.display = 'none';
+	}
+	bodyb.onclick = function(){
+		document.getElementsByClassName("modal")[i].close;
+	}
+}
+
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    }
+		else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+
+
+
+
+
+</script>
+
+</body>
+
+
+
+
+</html>
